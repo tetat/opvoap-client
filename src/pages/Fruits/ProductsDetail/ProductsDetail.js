@@ -17,7 +17,7 @@ const ProductsDetail = () => {
                 setPrices(data.product.prices);
                 // console.log(data.product.prices);
             });
-    }, []);
+    });
 
     // console.log("Prices: ", prices.Dinajpur);
 
