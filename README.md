@@ -1,7 +1,6 @@
-# Fresh Fruits Gallery
+# Online Price Verification of Agricultural Products
 
 <ul>
-<li>Online Price Verification of Agricultural Products</li>
 <li>Farmers can see their products original price from here.</li>
 </ul>
 
