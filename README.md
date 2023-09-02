@@ -1,25 +1,11 @@
 # Fresh Fruits Gallery
+
 <ul>
-<li>Online Fruits Supply</li>
-<li>Various type of fruits buy here</li>
-<li>Fresh & healthy fruits stock here</li>
-<li>Easy to run you business from here</li>
+<li>Online Price Verification of Agricultural Products</li>
+<li>Farmers can see their products original price from here.</li>
 </ul>
 
-Firebase Deploy link [Live server](https://agriculture-products-bd69f.web.app).
-
-Heroku deploy link [Heroku deploy](https://shielded-oasis-06280.herokuapp.com/fruits).
-
-Fresh Fruits Gallery client site code [See in Github](https://github.com/ProgrammingHeroWC4/warehouse-management-client-side-Solimullah10).
-
-Fresh Fruits Gallery server site code [See in Github](https://github.com/ProgrammingHeroWC4/warehouse-management-server-side-Solimullah10).
-
-
-
 ## Available Scripts
-
-
-
 
 ### `npm start`
 
