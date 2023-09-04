@@ -21,7 +21,7 @@ const Home = () => {
     return (
         <div>
             <Banner></Banner>
-            <marquee style={{ width: '73%' }} className="text-success"> <h2 className='my-5'>আপনি যে পণ্যটির দাম যাচাই করতে চাচ্ছেন সেই পণ্যটির বিস্তারিত দেখুন </h2></marquee>
+            <div className="bg-info text-light d-flex justify-content-center"> <h2 className='my-5'>আপনি যে পণ্যটির দাম যাচাই করতে চাচ্ছেন সেই পণ্যটির বিস্তারিত দেখুন </h2></div>
             <div className='my-4 ms-5 me-5'>
                 <Row xs={1} md={3} className="g-4">
                     {
