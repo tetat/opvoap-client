@@ -1,14 +1,15 @@
 import Cookies from 'js-cookie';
-import React, { useEffect, useState } from 'react';
-import { Navigate, useLocation } from 'react-router-dom';
+import { useEffect, useState } from 'react';
+import { useLocation, useNavigate } from 'react-router-dom';
 
 const RequireAuth = ({ children }) => {
-    const [user, setUser] = useState({});
+    const [user, setUser] = useState(true);
     const location = useLocation();
-    // const navigate = useNavigate();
+    const navigate = useNavigate();
 
     useEffect(() => {
         (async function() {
+            // console.log("ok");
             let jwt = Cookies.get('jwt');
             if (jwt !== undefined) {
                 await fetch('https://opvoap-server.onrender.com/curuser', {
@@ -20,30 +21,25 @@ const RequireAuth = ({ children }) => {
                 })
                 .then(res => res.json())
                 .then(data => {
-                    setUser(data);
-                    // console.log("auth require: ", data);
+                    console.log("auth require: ", data);
                     if (!data.email) {
                         // console.log("condition");
-                        return <Navigate to="/login" state={{ from: location }} replace />;
+                        navigate("/login", { replace: true });
+                        setUser(false);
+                    }else {
+                        setUser(true);
                     }
                 })
-            } else {
-                setUser({});
             }
         })();
-        
-    }, []);
+    });
 
-    // if (loading) {
-    //     return <Loading></Loading>
-    // }
+    console.log(user);
 
-    // console.log("auth require: ", user);
-
-    // if (!user.email) {
-    //     console.log("condition");
-    //     return <Navigate to="/login" state={{ from: location }} replace />;
-    // }
+    if (!user) {
+        // <Navigate to="/login" state={{ from: location }} replace />;
+        navigate("/login", { replace: true });
+    }
 
     return children;
 };

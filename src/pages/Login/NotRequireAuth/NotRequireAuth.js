@@ -28,7 +28,7 @@ const NotRequireAuth = ({ children }) => {
             }
         })();
         
-    }, []);
+    }, [navigate]);
 
     return children;
 };
