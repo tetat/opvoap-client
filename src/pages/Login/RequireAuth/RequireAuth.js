@@ -1,10 +1,10 @@
 import Cookies from 'js-cookie';
 import { useEffect, useState } from 'react';
-import { useLocation, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 const RequireAuth = ({ children }) => {
     const [user, setUser] = useState(true);
-    const location = useLocation();
+    // const location = useLocation();
     const navigate = useNavigate();
 
     useEffect(() => {
