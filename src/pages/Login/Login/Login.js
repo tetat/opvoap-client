@@ -45,6 +45,7 @@ const Login = () => {
           // console.log(errMessage);
         } else {
             Cookies.set("jwt", data.jwt);
+            // console.log("Login success");
             navigate("/", { replace: true });
         //   window.location.href = "/";
         }

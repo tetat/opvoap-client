@@ -25,7 +25,7 @@ const Header = () => {
                 .then(res => res.json())
                 .then(data => {
                     setUser(data);
-                    // console.log(data);
+                    console.log("error: ", data);
                     // console.log(Cookies.get());
                 })
             } else {
